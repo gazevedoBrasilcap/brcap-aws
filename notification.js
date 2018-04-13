@@ -10,7 +10,7 @@ var sns = new AWS.SNS({ apiVersion: '2012-11-05', httpOptions: { timeout: 25000 
 exports.get = function (queueURL, callback) {
 
     if (queueURL === undefined || queueURL === null || queueURL === '') {
-        callback("Falta informação da url da fila a ser lida.", null);
+        callback("queueURL missing or in a invalid state.", null);
     } else {
         var params = {
             AttributeNames: [
@@ -29,8 +29,8 @@ exports.get = function (queueURL, callback) {
             if (data.Messages) {
 
                 let retorno = {};
-                retorno.Message = JSON.parse(JSON.parse(data.Messages[0].Body).Message);
-                retorno.ReceiptHandle = data.Messages[0].ReceiptHandle;
+                retorno.body = JSON.parse(JSON.parse(data.Messages[0].Body).Message);
+                retorno.receiptHandle = data.Messages[0].ReceiptHandle;
                 retorno.code = 200;
                 retorno.message = 'message found';
 
@@ -48,9 +48,9 @@ exports.delete = function (queueURL, receiptHandle, callback) {
     console.log('chamou apagar')
 
     if (queueURL === undefined || queueURL === null || queueURL === '') {
-        callback("Falta informação da url da fila a ser lida.", null);
+        callback("queueURL missing or in a invalid state.", null);
     } else if (receiptHandle === undefined) {
-        callback("Falta informação do receiptHandle da mensagem a ser removida.", null);
+        callback("queueURL missing or in a invalid state.", null);
     } else {
         var deleteParams = {
             QueueUrl: queueURL,
@@ -65,10 +65,12 @@ exports.delete = function (queueURL, receiptHandle, callback) {
 exports.send = function (snsURL, payload, subject, callback) {
 
     if (payload === undefined || payload === null || payload === '') {
-        callback("Falta informação do payload.", null);
-    } else if (snsURL === undefined) {
-        callback("Falta informação do endereço do SNS a ser notificado.", null);
-    } else {
+        callback("payload missing or in a invalid state.", null);
+    } else if (snsURL === undefined || snsURL === null || snsURL === '') {
+        callback("snsURL missing or in a invalid state.", null);
+    } else if (subject === undefined || subject === null || subject === '') {
+        callback("subject missing or in a invalid state.", null);
+    }else {
         // then have to stringify the entire message payload
         payload = JSON.stringify(payload);
 
@@ -77,7 +79,7 @@ exports.send = function (snsURL, payload, subject, callback) {
             Message: payload,
             MessageStructure: 'text',
             TargetArn: snsURL,
-            Subject: 'Teste',
+            Subject: subject,
         }, function (err, data) {
             callback(err, data);
         });

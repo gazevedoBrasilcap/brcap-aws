@@ -2,7 +2,7 @@
   "name": "brcap-aws",
   "version": "1.0.0",
   "description": "Projeto responsável por abstrair algumas funcionalidades da sdk aws, auxiliando equipes iniciantes na plataforma.",
-  "main": "index.js",
+  "main": "notification.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

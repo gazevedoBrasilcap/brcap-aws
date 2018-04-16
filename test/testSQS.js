@@ -1,15 +1,13 @@
-var BRCAP_SQS = require('../SQS.js');
+var BRCAPAWS = require('../index.js');
 
-var SQS = new BRCAP_SQS('sa-east-1');
-
-SQS.get('https://sqs.sa-east-1.amazonaws.com/798354115863/SQS_A_TESTE_DEV', function (err, data) {
+BRCAPAWS.SQS_Get('https://sqs.sa-east-1.amazonaws.com/798354115863/SQS_A_TESTE_DEV', 'sa-east-1', function (err, data) {
     if (err) {
         console.log(err);
     } else {
         console.log(data);
         if (data.code == 200) {
             console.log(data.body.id);
-            SQS.delete('https://sqs.sa-east-1.amazonaws.com/798354115863/SQS_A_TESTE_DEV', data.receiptHandle, function (err, data) {
+            BRCAPAWS.SQS_Delete('https://sqs.sa-east-1.amazonaws.com/798354115863/SQS_A_TESTE_DEV', data.receiptHandle, 'sa-east-1', function (err, data) {
                 if (err) {
                     console.log(err);
                 } else {

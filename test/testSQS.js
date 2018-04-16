@@ -1,14 +1,15 @@
-var apiBrcapAws = require('../notification.js');
+var BRCAP_SQS = require('../SQS.js');
 
+var SQS = new BRCAP_SQS('sa-east-1');
 
-apiBrcapAws.get('https://sqs.sa-east-1.amazonaws.com/798354115863/SQS_A_TESTE_DEV', function (err, data) {
+SQS.get('https://sqs.sa-east-1.amazonaws.com/798354115863/SQS_A_TESTE_DEV', function (err, data) {
     if (err) {
         console.log(err);
     } else {
         console.log(data);
         if (data.code == 200) {
             console.log(data.body.id);
-            apiBrcapAws.delete('https://sqs.sa-east-1.amazonaws.com/798354115863/SQS_A_TESTE_DEV', data.receiptHandle, function (err, data) {
+            SQS.delete('https://sqs.sa-east-1.amazonaws.com/798354115863/SQS_A_TESTE_DEV', data.receiptHandle, function (err, data) {
                 if (err) {
                     console.log(err);
                 } else {

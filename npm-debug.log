@@ -1,0 +1,132 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'version',
+1 verbose cli   '1.4.0' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.0
+4 info git [ 'status', '--porcelain' ]
+5 verbose stack Error: Git working directory not clean.
+5 verbose stack M index.js
+5 verbose stack M node_modules/aws-sdk/CHANGELOG.md
+5 verbose stack M node_modules/aws-sdk/README.md
+5 verbose stack M node_modules/aws-sdk/apis/autoscaling-plans-2018-01-06.min.json
+5 verbose stack M node_modules/aws-sdk/apis/ce-2017-10-25.min.json
+5 verbose stack M node_modules/aws-sdk/apis/codepipeline-2015-07-09.min.json
+5 verbose stack M node_modules/aws-sdk/apis/devicefarm-2015-06-23.min.json
+5 verbose stack M node_modules/aws-sdk/apis/ec2-2016-11-15.min.json
+5 verbose stack M node_modules/aws-sdk/apis/elasticbeanstalk-2010-12-01.min.json
+5 verbose stack M node_modules/aws-sdk/apis/firehose-2015-08-04.min.json
+5 verbose stack M node_modules/aws-sdk/apis/iot-2015-05-28.min.json
+5 verbose stack M node_modules/aws-sdk/apis/medialive-2017-10-14.min.json
+5 verbose stack M node_modules/aws-sdk/apis/metadata.json
+5 verbose stack M node_modules/aws-sdk/apis/rds-2014-10-31.min.json
+5 verbose stack M node_modules/aws-sdk/apis/secretsmanager-2017-10-17.examples.json
+5 verbose stack M node_modules/aws-sdk/apis/ssm-2014-11-06.min.json
+5 verbose stack M node_modules/aws-sdk/clients/all.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/all.js
+5 verbose stack M node_modules/aws-sdk/clients/autoscalingplans.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/codepipeline.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/costexplorer.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/devicefarm.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/ec2.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/elasticbeanstalk.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/firehose.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/iot.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/medialive.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/rds.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/secretsmanager.d.ts
+5 verbose stack M node_modules/aws-sdk/clients/ssm.d.ts
+5 verbose stack M node_modules/aws-sdk/dist/aws-sdk-core-react-native.js
+5 verbose stack M node_modules/aws-sdk/dist/aws-sdk-react-native.js
+5 verbose stack M node_modules/aws-sdk/dist/aws-sdk.js
+5 verbose stack M node_modules/aws-sdk/dist/aws-sdk.min.js
+5 verbose stack M node_modules/aws-sdk/dist/xml2js.js
+5 verbose stack M node_modules/aws-sdk/lib/config_service_placeholders.d.ts
+5 verbose stack M node_modules/aws-sdk/lib/core.js
+5 verbose stack M node_modules/aws-sdk/package.json
+5 verbose stack M node_modules/base64-js/base64js.min.js
+5 verbose stack M node_modules/base64-js/index.js
+5 verbose stack M node_modules/base64-js/package.json
+5 verbose stack M node_modules/base64-js/test/big-data.js
+5 verbose stack M node_modules/base64-js/test/convert.js
+5 verbose stack M node_modules/base64-js/test/url-safe.js
+5 verbose stack M node_modules/lodash/README.md
+5 verbose stack M node_modules/lodash/_nodeUtil.js
+5 verbose stack M node_modules/lodash/core.js
+5 verbose stack M node_modules/lodash/core.min.js
+5 verbose stack M node_modules/lodash/lodash.js
+5 verbose stack M node_modules/lodash/lodash.min.js
+5 verbose stack M node_modules/lodash/package.json
+5 verbose stack M test/testRedis.js
+5 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\version.js:247:19
+5 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\utils\no-progress-while-running.js:21:8
+5 verbose stack     at ChildProcess.exithandler (child_process.js:195:7)
+5 verbose stack     at emitTwo (events.js:106:13)
+5 verbose stack     at ChildProcess.emit (events.js:191:7)
+5 verbose stack     at maybeClose (internal/child_process.js:891:16)
+5 verbose stack     at Socket.<anonymous> (internal/child_process.js:342:11)
+5 verbose stack     at emitOne (events.js:96:13)
+5 verbose stack     at Socket.emit (events.js:188:7)
+5 verbose stack     at Pipe._handle.close [as _onclose] (net.js:497:12)
+6 verbose cwd C:\Users\jthomaz\Desktop\brcap-aws
+7 error Windows_NT 10.0.15063
+8 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "version" "1.4.0"
+9 error node v6.11.0
+10 error npm  v3.10.10
+11 error Git working directory not clean.
+11 error M index.js
+11 error M node_modules/aws-sdk/CHANGELOG.md
+11 error M node_modules/aws-sdk/README.md
+11 error M node_modules/aws-sdk/apis/autoscaling-plans-2018-01-06.min.json
+11 error M node_modules/aws-sdk/apis/ce-2017-10-25.min.json
+11 error M node_modules/aws-sdk/apis/codepipeline-2015-07-09.min.json
+11 error M node_modules/aws-sdk/apis/devicefarm-2015-06-23.min.json
+11 error M node_modules/aws-sdk/apis/ec2-2016-11-15.min.json
+11 error M node_modules/aws-sdk/apis/elasticbeanstalk-2010-12-01.min.json
+11 error M node_modules/aws-sdk/apis/firehose-2015-08-04.min.json
+11 error M node_modules/aws-sdk/apis/iot-2015-05-28.min.json
+11 error M node_modules/aws-sdk/apis/medialive-2017-10-14.min.json
+11 error M node_modules/aws-sdk/apis/metadata.json
+11 error M node_modules/aws-sdk/apis/rds-2014-10-31.min.json
+11 error M node_modules/aws-sdk/apis/secretsmanager-2017-10-17.examples.json
+11 error M node_modules/aws-sdk/apis/ssm-2014-11-06.min.json
+11 error M node_modules/aws-sdk/clients/all.d.ts
+11 error M node_modules/aws-sdk/clients/all.js
+11 error M node_modules/aws-sdk/clients/autoscalingplans.d.ts
+11 error M node_modules/aws-sdk/clients/codepipeline.d.ts
+11 error M node_modules/aws-sdk/clients/costexplorer.d.ts
+11 error M node_modules/aws-sdk/clients/devicefarm.d.ts
+11 error M node_modules/aws-sdk/clients/ec2.d.ts
+11 error M node_modules/aws-sdk/clients/elasticbeanstalk.d.ts
+11 error M node_modules/aws-sdk/clients/firehose.d.ts
+11 error M node_modules/aws-sdk/clients/iot.d.ts
+11 error M node_modules/aws-sdk/clients/medialive.d.ts
+11 error M node_modules/aws-sdk/clients/rds.d.ts
+11 error M node_modules/aws-sdk/clients/secretsmanager.d.ts
+11 error M node_modules/aws-sdk/clients/ssm.d.ts
+11 error M node_modules/aws-sdk/dist/aws-sdk-core-react-native.js
+11 error M node_modules/aws-sdk/dist/aws-sdk-react-native.js
+11 error M node_modules/aws-sdk/dist/aws-sdk.js
+11 error M node_modules/aws-sdk/dist/aws-sdk.min.js
+11 error M node_modules/aws-sdk/dist/xml2js.js
+11 error M node_modules/aws-sdk/lib/config_service_placeholders.d.ts
+11 error M node_modules/aws-sdk/lib/core.js
+11 error M node_modules/aws-sdk/package.json
+11 error M node_modules/base64-js/base64js.min.js
+11 error M node_modules/base64-js/index.js
+11 error M node_modules/base64-js/package.json
+11 error M node_modules/base64-js/test/big-data.js
+11 error M node_modules/base64-js/test/convert.js
+11 error M node_modules/base64-js/test/url-safe.js
+11 error M node_modules/lodash/README.md
+11 error M node_modules/lodash/_nodeUtil.js
+11 error M node_modules/lodash/core.js
+11 error M node_modules/lodash/core.min.js
+11 error M node_modules/lodash/lodash.js
+11 error M node_modules/lodash/lodash.min.js
+11 error M node_modules/lodash/package.json
+11 error M test/testRedis.js
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]

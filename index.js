@@ -1,6 +1,7 @@
 var SNS = require('./Services/notifications/SNS');
 var SQS = require('./Services/notifications/SQS');
 var Redis = require('./Services/cache/Redis');
+var S3 = require('./Services/storage/S3');
 
 exports.SNS_Post = function (snsURL, payload, subject, region, callback){
     SNS_Post = new SNS(region);
@@ -27,29 +28,38 @@ exports.SQS_Delete = function (queueURL, receiptHandle, region, callback){
     });
 }
 
-exports.Memcached_Get = function (key, host, port, callback){
+exports.Redis_Get = function (key, host, port, callback){
 
-    Memcached_Get = new Redis(host, port);
+    Redis_Get = new Redis(host, port);
     
-    Memcached_Get.get(key, function(err, data){
+    Redis_Get.get(key, function(err, data){
         callback(err, data);
     });
 }
 
-exports.Memcached_Post = function (key, value, ttl, host, port, callback){
+exports.Redis_Post = function (key, value, ttl, host, port, callback){
 
-    Memcached_Post = new Redis(host, port);
+    Redis_Post = new Redis(host, port);
     
-    Memcached_Post.post(key, value, ttl, function(err, data){
+    Redis_Post.post(key, value, ttl, function(err, data){
         callback(err, data);
     });
 }
 
-exports.Memcached_Delete = function (key, host, port, callback){
+exports.Redis_Delete = function (key, host, port, callback){
 
-    Memcached_Delete = new Redis(host, port);
+    Redis_Delete = new Redis(host, port);
     
-    Memcached_Delete.delete(key, function(err, data){
+    Redis_Delete.delete(key, function(err, data){
+        callback(err, data);
+    });
+}
+
+exports.S3_Get = function (bucket, key, callback){
+
+    S3_Get = new S3();
+    
+    S3_Get.get(bucket, key, function(err, data){
         callback(err, data);
     });
 }

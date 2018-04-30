@@ -23,7 +23,6 @@ module.exports = class SQS {
                     "All"
                 ],
                 QueueUrl: queueURL,
-                VisibilityTimeout: 0,
                 WaitTimeSeconds: 20
             };
 
